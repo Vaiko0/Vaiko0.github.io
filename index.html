@@ -1,11 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon portfolio</title>
+    <meta name="description" content="Portfolio de développeur étudiant">
+    <title>Portfolio | Corentin GUI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Bienvenue sur mon portfolio</h1>
+
+    <header class="sticky-nav">
+        <div class="logo">Corentin GUI</div>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Changer de thème">☀️</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1><span class="highlight">Corentin GUI</span></h1>
+                <p class="subtitle">Développeur en Formation</p>
+                
+                <div class="social-links">
+                    <a href="#" aria-label="Github"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Mail"><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="CV.pdf" class="btn btn-outline" download>CV <i class="fas fa-download"></i></a>
+                    <a href="#contact" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img">
+                        <img src="https://via.placeholder.com/300" alt="Photo de profil">
+                    </div>
+                    <div class="about-text">
+                        <h2>À propos de moi</h2>
+                        <p>
+                            Étudiant en seconde année en Développement informatique. 
+                            J'ai toujours aimé comprendre le fonctionnement des choses, 
+                            ce qui m'a naturellement dirigé vers le développement logiciel.
+                        </p>
+                        <p class="interests">
+                            <i class="fas fa-star"></i> <strong>Intérêts:</strong> Tech, Jeux Vidéo, Sport
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Mes Projets</h2>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>Pas encore de nom</h3>
+                            <span class="date">Jan 2026 - Présent</span>
+                        </div>
+                        <p class="project-desc">Un site web dynamique avec une carte intéractive pour voir grâce a des points sur celle
+                            ci ou une photo a était prise.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <div class="card-links">
+                            <button class="btn-details open-modal" data-target="modal-projet-1">Voir détails -></button>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-header">
+                            <h3>js-spot-the-square</h3>
+                            <span class="date">Sept 2025</span>
+                        </div>
+                        <p class="project-desc">Projet scolaire qui reprend le fonctionnement de vision sur chess.com.</p>
+                        <div class="tech-tags">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <div class="card-links">
+                            <button class="btn-details open-modal" data-target="modal-projet-2">Voir détails -></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Me contacter</h2>
+                <div class="contact-wrapper">
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Votre message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <p>N'hésitez pas à me contacter : </p>
+                        <ul>
+                            <li><i class="fas fa-envelope"></i> corentin.gui06@gmail.com</li>
+                            <li><i class="fab fa-linkedin"></i> www.linkedin.com/in/corentin-gui</li>
+                            <li><i class="fab fa-github"></i> https://github.com/Vaiko0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Portfolio Corentin GUI</p>
+    </footer>
+
+    <!-- MODALES PROJETS -->
+    <div id="modal-projet-1" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-box">
+            <button class="modal-close">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Nom du Projet 1</h2>
+                <span class="modal-date">Jan 2025 - Présent</span>
+            </div>
+            
+            <div class="modal-content">
+                <div class="modal-tech">
+                    <h3>Technologies utilisées</h3>
+                    <p>HTML • CSS • JavaScript</p>
+                </div>
+                
+                <div class="modal-desc">
+                    <h3>Description</h3>
+                    <p>Un site web dynamique avec une carte intéractive pour voir grâce a des points sur celle
+                       ci ou une photo a était prise. L'utilisateur pourra se connecter en tant qu'admin et ajouter
+                        directement depuis le site web des photos sur la carte a l'aide des coordonnées. En cours de développement.</p>
+                </div>
+                
+                <div class="modal-features">
+                    <h3>Fonctionnalités principales</h3>
+                    <ul>
+                        <li>→ Carte intéractive via leafletjs</li>
+                        <li>→ Base de donnée de Photo</li>
+                        <li>→ Interface fluide et responsive</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-projet-2" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-box">
+            <button class="modal-close">&times;</button>
+            
+            <div class="modal-header">
+                <h2>js-spot-the-square</h2>
+                <span class="modal-date">Sept 2025</span>
+            </div>
+            
+            <div class="modal-content">
+                <div class="modal-tech">
+                    <h3>Technologies utilisées</h3>
+                    <p>HTML • CSS • JavaScript</p>
+                </div>
+                
+                <div class="modal-desc">
+                    <h3>Description</h3>
+                    <p>Spot The Square est une application web inspirée du jeu Vision de chess.com.
+                        Elle aide les joueurs d’échecs à visualiser rapidement les 64 cases de l’échiquier.
+                        Le principe : une case est désignée aléatoirement, le joueur doit cliquer dessus le plus vite possible. 
+                        Chaque bonne réponse rapporte 1 point.
+                    </p>
+                </div>
+                
+                <div class="modal-features">
+                    <h3>Fonctionnalités principales</h3>
+                    <ul>
+                        <li>→ Échiquier interactif (64 cases)</li>
+                        <li>→ Sélection aléatoire d’une case à trouver</li>
+                        <li>→ Gestion et affichage du score en temps réel</li>
+                        <li>→ Mode chrono (1 ou 2 minutes)</li>
+                        <li>→ Mode survie avec 3 vies</li>
+                        <li>→ Sauvegarde et affichage du meilleur score via localStorage</li>
+                        <li>→ Possibilité de retourner l’échiquier pour s’entraîner côté noir</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
