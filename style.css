@@ -66,6 +66,23 @@ button:focus-visible {
     border-radius: 4px;
 }
 
+#theme-toggle:focus-visible {
+    outline: none;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    color: var(--accent);
+}
+
 ul { list-style: none; }
 
 /* =========================================
@@ -118,7 +135,8 @@ header a:hover { color: var(--accent); }
 .btn-outline {
     background-color: var(--accent);
     border: 2px solid var(--accent);
-    color: white; 
+    color: white;
+    font-weight: 600;
 }
 .btn-outline:hover {
     background-color: var(--accent-hover);
