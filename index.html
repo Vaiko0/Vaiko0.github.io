@@ -16,6 +16,7 @@
         <nav>
             <ul>
                 <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle" aria-label="Changer de thème">☀️</button></li>
@@ -64,6 +65,65 @@
             </div>
         </section>
 
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Mes Compétences</h2>
+                
+                <div class="skills-grid">
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> HTML & CSS</li>
+                            <li><i class="fas fa-check"></i> JavaScript</li>
+                            <li><i class="fas fa-check"></i> React</li>
+                            <li><i class="fas fa-check"></i> Responsive Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Backend</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> PHP</li>
+                            <li><i class="fas fa-check"></i> Node.js</li>
+                            <li><i class="fas fa-check"></i> Python</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Bases de données</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> MySQL</li>
+                            <li><i class="fas fa-check"></i> Modélisation (MCD/MLD)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Outils & Environnement</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-check"></i> Git & GitHub</li>
+                            <li><i class="fas fa-check"></i> VS Code</li>
+                            <li><i class="fas fa-check"></i> Figma (Maquettes)</li>
+                            <li><i class="fas fa-check"></i> Méthode Agile</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="projects-section">
             <div class="container">
                 <h2 class="section-title">Mes Projets</h2>
@@ -71,7 +131,7 @@
                 <div class="projects-grid">
                     <article class="project-card">
                         <div class="card-header">
-                            <h3>Pas encore de nom</h3>
+                            <h3>Carte interactive</h3>
                             <span class="date">Jan 2026 - Présent</span>
                         </div>
                         <p class="project-desc">Un site web dynamique avec une carte intéractive pour voir grâce a des points sur celle
@@ -103,33 +163,29 @@
 
         <section id="contact" class="contact-section">
             <div class="container">
-                <h2>Me contacter</h2>
-                <div class="contact-wrapper">
-                    
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" placeholder="Votre nom">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="votre@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" placeholder="Votre message..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
-                    </form>
-
-                    <div class="contact-info">
-                        <p>N'hésitez pas à me contacter : </p>
-                        <ul>
-                            <li><i class="fas fa-envelope"></i> corentin.gui06@gmail.com</li>
-                            <li><i class="fab fa-linkedin"></i> www.linkedin.com/in/corentin-gui</li>
-                            <li><i class="fab fa-github"></i> https://github.com/Vaiko0</li>
-                        </ul>
-                    </div>
+                <h2 class="section-title">Me contacter</h2>
+                <div class="contact-info-center">
+                    <p>N'hésitez pas à me contacter :</p>
+                    <ul class="contact-links">
+                        <li>
+                            <a href="mailto:corentin.gui06@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <span>corentin.gui06@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/corentin-gui" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                                <span>linkedin.com/in/corentin-gui</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Vaiko0" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>github.com/Vaiko0</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -139,7 +195,6 @@
         <p>© 2026 - Portfolio Corentin GUI</p>
     </footer>
 
-    <!-- MODALES PROJETS -->
     <div id="modal-projet-1" class="modal">
         <div class="modal-overlay"></div>
         <div class="modal-box">
