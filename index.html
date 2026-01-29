@@ -41,7 +41,7 @@
                     <a href="#contact" class="btn btn-primary">Contact</a>
                 </div>
             </div>
-            <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+            <a href="#about" class="scroll-down" aria-label="Scroll vers la section À propos"><i class="fas fa-chevron-down"></i></a>
         </section>
 
         <section id="about" class="about-section">
@@ -140,7 +140,7 @@
                             <span>HTML</span><span>CSS</span><span>JS</span>
                         </div>
                         <div class="card-links">
-                            <button class="btn-details open-modal" data-target="modal-projet-1">Voir détails -></button>
+                            <button class="btn-details open-modal" data-target="modal-projet-1" tabindex="0" aria-expanded="false" aria-controls="modal-projet-1">Voir détails -></button>
                         </div>
                     </article>
 
@@ -154,7 +154,7 @@
                             <span>HTML</span><span>CSS</span><span>JS</span>
                         </div>
                         <div class="card-links">
-                            <button class="btn-details open-modal" data-target="modal-projet-2">Voir détails -></button>
+                            <button class="btn-details open-modal" data-target="modal-projet-2" tabindex="0" aria-expanded="false" aria-controls="modal-projet-2">Voir détails -></button>
                         </div>
                     </article>
                 </div>
@@ -197,11 +197,11 @@
 
     <div id="modal-projet-1" class="modal">
         <div class="modal-overlay"></div>
-        <div class="modal-box">
-            <button class="modal-close">&times;</button>
+        <div class="modal-box" role="dialog" aria-labelledby="modal-titre-1" aria-modal="true">
+            <button class="modal-close" aria-label="Fermer la modale">&times;</button>
             
             <div class="modal-header">
-                <h2>Nom du Projet 1</h2>
+                <h2 id="modal-titre-1">Nom du Projet 1</h2>
                 <span class="modal-date">Jan 2025 - Présent</span>
             </div>
             
@@ -232,11 +232,11 @@
 
     <div id="modal-projet-2" class="modal">
         <div class="modal-overlay"></div>
-        <div class="modal-box">
-            <button class="modal-close">&times;</button>
+        <div class="modal-box" role="dialog" aria-labelledby="modal-titre-2" aria-modal="true">
+            <button class="modal-close" aria-label="Fermer la modale">&times;</button>
             
             <div class="modal-header">
-                <h2>js-spot-the-square</h2>
+                <h2 id="modal-titre-2">js-spot-the-square</h2>
                 <span class="modal-date">Sept 2025</span>
             </div>
             

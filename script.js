@@ -53,44 +53,61 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalOverlays = document.querySelectorAll('.modal-overlay');
     const modals = document.querySelectorAll('.modal');
 
-    // Ouvrir modale
-    openModalButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+    // Ouvrir une modale
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = btn.getAttribute('data-target');
+            const targetId = button.getAttribute('data-target');
             const modal = document.getElementById(targetId);
             if (modal) {
                 modal.classList.add('show');
+                button.setAttribute('aria-expanded', 'true');
                 document.body.style.overflow = 'hidden';
+                
+                // Diriger le focus vers la modale
+                const modalBox = modal.querySelector('.modal-box');
+                if (modalBox) {
+                    setTimeout(() => {
+                        modalBox.focus();
+                    }, 100);
+                }
             }
         });
     });
 
-    // Fermer modale
-    const closeModal = (modal) => {
+    // Fermer une modale
+    const closeModal = (modal, button) => {
         modal.classList.remove('show');
+        if (button) {
+            button.setAttribute('aria-expanded', 'false');
+        }
         document.body.style.overflow = 'auto';
     };
 
-    closeModalButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            closeModal(btn.closest('.modal'));
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            const triggerButton = document.querySelector(`.open-modal[data-target="${modal.id}"]`);
+            closeModal(modal, triggerButton);
         });
     });
 
-    // Fermer en cliquant overlay
+    // Fermer en cliquant sur l'overlay
     modalOverlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            closeModal(overlay.closest('.modal'));
+            const modal = overlay.closest('.modal');
+            const triggerButton = document.querySelector(`.open-modal[data-target="${modal.id}"]`);
+            closeModal(modal, triggerButton);
         });
     });
 
-    // Fermer avec Échap
+    // Fermer avec la touche Échap
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 if (modal.classList.contains('show')) {
-                    closeModal(modal);
+                    const triggerButton = document.querySelector(`.open-modal[data-target="${modal.id}"]`);
+                    closeModal(modal, triggerButton);
                 }
             });
         }
