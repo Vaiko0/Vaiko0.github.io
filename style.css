@@ -7,7 +7,7 @@
     --bg-color: #111111;      
     --card-bg: #1a1a1a;        
     --text-main: #ffffff;     
-    --text-muted: #a0a0a0;   
+    --text-muted: #b8b8b8;   
     --accent: #e65100;        
     --accent-hover: #ff6d00;  
     
@@ -127,7 +127,7 @@ header a:hover { color: var(--accent); }
 }
 
 .hero-content h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-.hero-content .subtitle { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 2rem; }
+.hero-content .subtitle { font-size: 1.5rem; color: var(--text-muted); margin-bottom: 2rem; font-weight: 500; }
 .social-links { font-size: 1.8rem; margin-bottom: 2rem; }
 .social-links a { margin: 0 10px; }
 .social-links a:hover { color: var(--accent); }
@@ -209,6 +209,7 @@ header a:hover { color: var(--accent); }
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 500;
 }
 
 /* La petite coche (check) */
@@ -231,7 +232,7 @@ header a:hover { color: var(--accent); }
 
 .card-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1rem; }
 .card-header h3 { font-size: 1.4rem; }
-.card-header .date { font-size: 0.8rem; color: var(--text-muted); }
+.card-header .date { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
 
 .tech-tags span {
     display: inline-block;
@@ -261,6 +262,7 @@ header a:hover { color: var(--accent); }
     font-size: 1.2rem;
     color: var(--text-muted);
     margin-bottom: 2.5rem;
+    font-weight: 500;
 }
 
 .contact-links {
@@ -394,6 +396,7 @@ header a:hover { color: var(--accent); }
 .modal-date {
     font-size: 0.9rem;
     color: var(--text-muted);
+    font-weight: 500;
 }
 
 .modal-content {
@@ -420,6 +423,7 @@ header a:hover { color: var(--accent); }
 .modal-desc p {
     color: var(--text-main);
     line-height: 1.7;
+    font-weight: 500;
 }
 
 .modal-features ul {
@@ -431,6 +435,37 @@ header a:hover { color: var(--accent); }
     margin-bottom: 0.7rem;
     padding-left: 1.2rem;
     line-height: 1.6;
+}
+
+.modal-links {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--input-border);
+}
+
+.modal-links h3 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-links p {
+    color: var(--text-main);
+    line-height: 1.7;
+    word-break: break-all;
+    font-weight: 500;
+}
+
+.modal-links a {
+    color: var(--accent);
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.modal-links a:hover {
+    color: var(--accent-hover);
 }
 
 .btn-details {
